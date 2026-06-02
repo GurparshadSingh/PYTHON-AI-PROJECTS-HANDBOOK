@@ -1,0 +1,123 @@
+# class smartPhone:
+
+#     def __init__(self,color,ram,rom):
+#         self.color = color
+#         self.ram=ram
+#         self.rom=rom
+
+#     def model(self):
+#         print("S25 ultra")
+
+# phone1 = smartPhone("red",14,16)
+# print(phone1.color)
+# print(phone1.ram)
+# print(phone1.rom)
+# phone1.model()
+# phone1.color="black"
+# print(phone1.color)
+
+# class Animal:
+#     def __init__(self,height,weight):
+#         # self.name=name
+#         # self.color=color
+#         self.height=height
+#         self.weight=weight
+#         # self.eyeColor=eyeColor
+#     def bark(self):
+#         print(f" Ms. bitch named ${self.name} is now barking")
+
+#     def mission(self):
+#         print(f" Ms. bitch named ${self.name} is now on a mission")
+
+# sunandan = Animal(0.1,10)
+# # sunandan.bark()
+# # sunandan.mission()
+
+# class Bird(Animal):
+#     def __init__(self,age,origin,height,weight):
+#         self.age=age
+#         self.origin=origin
+#         super().__init__(height,weight)
+
+# sunandu = Bird(900,"wakanda",1,100)
+# print(sunandu.origin)
+# class Student:
+#     name="sunandi"
+#     age="08"
+#     width="22 feet"
+#     height="02 feet"
+
+# s1 = Student()
+# s2 = Student()
+# s3 = Student()
+
+# print(s1.name)
+# s1.name="dhruv rathi"
+# print(s1.name)
+
+# s2.name="ruraaaa tahkur"
+# print(s2.name)
+
+
+# s3.name="guigudigigdigugdigoooobamdigididumdum"
+# # print(s3.name)
+# # print(s3.width)
+# print(f"{s3.name}'s width is {s3.width}")
+
+
+# class Bankacc:
+#     def __init__(self,balance):
+#         self.balance=balance
+
+#     def __add__(self, acc):
+#         return Bankacc(self.balance+acc.balance)
+
+#     def _print(self):
+#         print(f"the balance is {self.balance}")
+
+# acc1=Bankacc(3000)
+# acc2=Bankacc(5000)
+
+# acc= acc1+acc2
+# acc._print()
+
+
+# class user:
+#     def login(self):
+#         print("hi")
+
+
+# class student(user):
+#     def __init__(self,rollNo):
+#         self.rollNo = rollNo
+
+#     def name(self):
+#         self.name = "virat"
+
+
+# s = student(1234)
+# print(s.rollNo)
+
+class Parent:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+
+class Student(Parent):
+    def __init__(self,rollNo,marks,name,age):
+        self.rollNo=rollNo
+        self.marks=marks
+        super().__init__(name,age)
+        #we dont pass self in super coz it is already passes by python 
+        
+class CollegeStudent(Student):
+    def __init__(self,collegeName,Branch,rollNo,marks,name,age):
+        self.collegeName=collegeName
+        self.Branch=Branch
+        super().__init__(rollNo,marks,name,age)
+        
+student_1=CollegeStudent("cgc","cse",1387,28,"asd",12)
+print(student_1.Branch)
+# s1=Student(12,14,"adarsh",41)
+
+
